@@ -1,0 +1,55 @@
+---
+id: pgvector-admin
+name: "pgvector Admin"
+version: 1.0.0
+description: "Inspect PostgreSQL pgvector ivfflat and HNSW cosine/L2 index configurations"
+author: "AURA Team"
+category: data
+tags:
+  - "pgvector"
+  - "postgres vector"
+  - "vector index"
+  - "hnsw postgres"
+triggers:
+  - "pgvector"
+  - "postgres vector"
+  - "vector index"
+  - "hnsw postgres"
+permissions:
+  - type: database
+    scope: [*]
+enabled: true
+entryPoint: src/skills/expansion/index.ts
+---
+
+# pgvector Admin
+
+Inspect PostgreSQL pgvector ivfflat and HNSW cosine/L2 index configurations
+
+## Metadata
+
+- **ID:** `pgvector-admin`
+- **Category:** `data`
+- **Version:** `1.0.0`
+- **Author:** AURA Team
+
+## Permissions
+
+- `database` (scope: `*`)
+
+## Triggers
+
+- `pgvector`
+- `postgres vector`
+- `vector index`
+- `hnsw postgres`
+
+## Usage
+
+This portable skill is registered in the AURA Native Skill Runtime. It can be invoked directly by ID:
+
+```javascript
+const result = await runtime.execute('pgvector-admin', {
+  /* input parameters */
+});
+```
